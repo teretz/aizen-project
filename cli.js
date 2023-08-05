@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 const axios = require('axios');
 const prompt = require('prompt-sync')();
 
+=======
+>>>>>>> main
 // Import necessary functions (to be defined)
 const {
   appendToFile,
@@ -20,6 +23,7 @@ const {
   updateWholeFile
 } = require('./api');
 
+<<<<<<< HEAD
 // Get user input
 const userInput = prompt('How can I assist you? ');
 
@@ -89,3 +93,53 @@ axios.post(`https://api.openai.com/v1/engines/${gptModel}/completions`, {
 .catch(error => {
   console.error('Error communicating with GPT-3:', error);
 });
+=======
+const command = process.argv[2];
+const model = process.argv[3];
+const args = process.argv.slice(4);
+
+switch (command) {
+  case 'appendToFile':
+    appendToFile(model, args);
+    break;
+  case 'createDirectory':
+    createDirectory(model, args);
+    break;
+  case 'createFile':
+    createFile(model, args);
+    break;
+  case 'deleteDirectory':
+    deleteDirectory(model, args);
+    break;
+  case 'deleteFile':
+    deleteFile(model, args);
+    break;
+  case 'executeCommand':
+    executeCommand(model, args);
+    break;
+  case 'listFilesInDirectory':
+    listFilesInDirectory(model, args);
+    break;
+  case 'readFile':
+    readFile(model, args);
+    break;
+  case 'readMultipleFiles':
+    readMultipleFiles(model, args);
+    break;
+  case 'renameFile':
+    renameFile(model, args);
+    break;
+  case 'update':
+    update(model, args);
+    break;
+  case 'updateAll':
+    updateAll(model, args);
+    break;
+  case 'updateWholeFile':
+    updateWholeFile(model, args);
+    break;
+  default:
+    console.error('Unknown command:', command);
+    process.exit(1);
+}
+>>>>>>> main
