@@ -1,0 +1,16 @@
+{
+  "name": "aizen",
+  "version": "1.0.0",
+  "description": "A CLI-based plugin for GPT-3.5-turbo-16k",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.18.2",
+    "prompt-sync": "^4.2.0"
+  }
+}
